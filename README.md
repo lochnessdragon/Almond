@@ -1,4 +1,4 @@
-# Hazel [![License](https://img.shields.io/github/license/TheCherno/Hazel.svg)](https://github.com/TheCherno/Hazel/blob/master/LICENSE)
+# Hazel Test Application (Almond) [![License](https://img.shields.io/github/license/TheCherno/Hazel.svg)](https://github.com/TheCherno/Hazel/blob/master/LICENSE)
 
 ![Hazel](/Resources/Branding/Hazel_Logo_Text_Light_Square.png?raw=true "Hazel")
 
@@ -10,6 +10,9 @@ Visual Studio 2017 or 2019 is recommended, Hazel is officially untested on other
 Start by cloning the repository with `git clone --recursive https://github.com/TheCherno/Hazel`.
 
 If the repository was cloned non-recursively previously, use `git submodule update --init` to clone the necessary submodules.
+
+## Our Plan
+Create an example platformer in Hazel as a learning resource to newcomers. Maybe it'll even be featured in a code review. :wink:
 
 ## The Plan
 The plan for Hazel is two-fold: to create a powerful 3D engine, but also to serve as an education tool for teaching game engine design and architecture. Because of this the development inside this repository is rather slow, since everything has to be taught and implemented on-camera. There is a much more advanced version of the engine in a private repository called `Hazel-dev`, accessible to supporters on [Patreon](https://patreon.com/thecherno). The plan for this project is to mostly take already implemented code from the `Hazel-dev` repository and integrate it into this one, done within videos and supported by explanations.
