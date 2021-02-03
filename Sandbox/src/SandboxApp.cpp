@@ -3,6 +3,7 @@
 
 #include "Sandbox2D.h"
 #include "ExampleLayer.h"
+#include "LogoLayer.h"
 
 class Sandbox : public Hazel::Application
 {
@@ -11,6 +12,7 @@ public:
 	{
 		// PushLayer(new ExampleLayer());
 		PushLayer(new Sandbox2D());
+		//PushLayer(new LogoLayer());
 	}
 
 	~Sandbox()

@@ -2,6 +2,7 @@
 
 #include "Hazel/Core/Timestep.h"
 #include "Hazel/Renderer/EditorCamera.h"
+#include "Hazel/Physics/Physics2D.h"
 
 #include "entt.hpp"
 
@@ -29,6 +30,9 @@ namespace Hazel {
 	private:
 		entt::registry m_Registry;
 		uint32_t m_ViewportWidth = 0, m_ViewportHeight = 0;
+
+		// Physics 2D
+		World2D m_World;
 
 		friend class Entity;
 		friend class SceneSerializer;

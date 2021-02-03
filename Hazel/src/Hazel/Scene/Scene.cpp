@@ -10,7 +10,7 @@
 
 namespace Hazel {
 
-	Scene::Scene()
+	Scene::Scene() : m_World()
 	{
 	}
 
@@ -34,6 +34,14 @@ namespace Hazel {
 
 	void Scene::OnUpdateRuntime(Timestep ts)
 	{
+		// Update Physics
+		{
+			// apply physics to the world
+			m_World.OnUpdate(ts);
+
+			// tell all rigidbodies to update their positions
+		}
+		
 		// Update scripts
 		{
 			m_Registry.view<NativeScriptComponent>().each([=](auto entity, auto& nsc)
@@ -70,6 +78,7 @@ namespace Hazel {
 
 		if (mainCamera)
 		{
+			//HZ_CORE_INFO("Main Camera exists");
 			Renderer2D::BeginScene(*mainCamera, cameraTransform);
 
 			auto group = m_Registry.group<TransformComponent>(entt::get<SpriteRendererComponent>);
@@ -82,7 +91,6 @@ namespace Hazel {
 
 			Renderer2D::EndScene();
 		}
-
 	}
 
 	void Scene::OnUpdateEditor(Timestep ts, EditorCamera& camera)

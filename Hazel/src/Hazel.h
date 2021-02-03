@@ -36,3 +36,7 @@
 
 #include "Hazel/Renderer/OrthographicCamera.h"
 // -----------------------------------
+
+// ---Physics2D-----------------------
+#include "Hazel/Physics/World2D.h"
+// -----------------------------------
